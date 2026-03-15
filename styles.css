@@ -37,7 +37,7 @@ html {font-family: Yuji Syuku, serif; overflow: auto;}
 a:link{color: var(--white);}
 a:visited{color: var(--white);}
 a:active{color: var(--white);}
-body{font-size: 1.2vw; color: var(--grey); padding: 0; margin: auto; background-color: var(--middlered);}
+body{font-size: 1.2vw; color: var(--grey); padding: 0; margin: auto; background-color: var(--middlered); background-image: url(assets/bg.webp); background-size: cover; background-position: center center; background-attachment: fixed;}
 html, body {
   height: 100%;
   margin: 0;
@@ -87,14 +87,17 @@ h2{color: var(--grey); padding-bottom: 0.2vw; margin-left: 1vw; font-size: 1.7em
 /*items*/
 #picture{width: 100%; grid-column-start: 1; grid-column-end: 2; grid-row-start: 2; grid-row-end: 4; 
   justify-self: center; align-self: center; max-width: 100%;}
-#like{max-width: 100%; margin-top: 1.7vw;}
-#am{margin-bottom: .9vw; max-width: 100%;}
+#like{max-width: 100%;}
+#am{margin-bottom: 1vw;}
+h3{margin-bottom: 1vw;}
+#like>h3{margin-top: 1vw;}
+#am>h3{margin-top: 1vw;}
 
 h3{font-size: 1.8em; letter-spacing: .2vw; color: var(--lightred); font-family: Luxurious Roman, serif;}
-#content ul{font-size: 1.2em; color: var(--orange);}
+#content ul{font-size: 1.2em; color: var(--orange); padding-inline-start: 3vw;}
 li{list-style-type: '★'; line-height: 2.7vw; letter-spacing: -.06em;}
 
-p{font-size: 1.2em; text-align: center;}
+.homepage p{font-size: 1.2em; text-align: center; margin: 0 auto; width: 80%; line-height: 2vw;}
 
 
 
@@ -109,7 +112,8 @@ p{font-size: 1.2em; text-align: center;}
     h2{font-size: 2.2em;}
     #content ul{font-size: 1.6em;}
     #content li{line-height: 3.3vw;}
-    p{font-size: 1.6em;}
+    .homepage p{font-size: 1.6em; line-height: 2.5vw;}
+    body:has(>.homepage){background-image: url(assets/bg2.webp); background-size: cover;}
 
   /*page width
   grid width for image size
@@ -120,20 +124,38 @@ p{font-size: 1.2em; text-align: center;}
 @media screen and (max-width: 830px){
   .homepage{width: 100%; height: 100%;}
   .homepage>#navbar{font-size: 2.2em; padding: 1.2vw;}
-  #content{width: 90%;}
+  #content{width: 85%; margin-top: 2vw;}
   #content ul{font-size: 1.9em;}
   #content li{line-height: 3.8vw;}
-  p{font-size: 1.9em; margin-top: 2vw;}
-}
-
-@media screen and (max-width: 500px){
-  .homepage>#navbar{font-size: 3.7em; column-gap: 15vw; padding: 2.5vw;}
-
+  h3{margin-bottom: 1vw; font-size: 2.6em;}
+  #like>h3{margin-top: 2vw;}
+  #am>h3{margin-top: 1.8vw;}
+  .homepage p{font-size: 1.9em; margin: 2vw auto 0 auto; width: 80%; }
 }
 
 @media screen and (max-width: 650px){
   .homepage>#navbar{font-size: 2.5em; column-gap: 11vw; padding: 1.6vw;}
 }
+
+@media screen and (max-width: 550px){
+  .homepage>#navbar{font-size: 3.7em; column-gap: 15vw; padding: 2.5vw;}
+  #content{display: flex; flex-direction: column; width: 100%; margin-top: 5vw;}
+  #deco{position: absolute; width: 25%; top: 90vw; left: 60vw;}
+  #content>#picture{width: 60%; margin: 2vw auto;}
+  #namediv{text-align: center;}
+  #namediv h2{font-size: 4em; margin: 0; margin-right: 3vw;}
+  #namediv #name{font-size: 9em;}
+  #content ul{font-size: 3.2em;}
+  #content li{line-height: 6.9vw;}
+  h3{font-size: 4.3em; margin-bottom: 2vw; padding-left: 4vw;}
+  #content>#bullets{display: flex; flex-direction: column; align-items: center; justify-content: start; width: 93%;}
+  #content>#bullets>div{align-self: start; justify-self: center;}
+  .homepage p{font-size: 3em; margin: 2vw 12vw; line-height: 5vw;}
+  #am{margin-right: 4vw; margin-left: 5vw;}
+  #like{margin-bottom: 2vw; margin-right: 5vw;}
+  
+}
+
 
 
 
@@ -154,7 +176,7 @@ p{font-size: 1.2em; text-align: center;}
 
 
 /*work*/
-body:has(>.workpage){height: auto; margin: 0;}
+body:has(>.workpage){height: auto; margin: 0; background-image: url(assets/bg2.webp);}
 html:has(>.workpage){height: auto; margin: 0;}
 .workpage>body{height: auto;}
 .workpage>html{height: auto;}
@@ -165,20 +187,21 @@ html:has(>.workpage){height: auto; margin: 0;}
 #heading img{width: 8%; align-self: center; max-width: 100%;}
 #worktitle{font-family: Luxurious Roman, serif; text-transform: uppercase; text-shadow: 4px 3px 2px var(--darkred); color: var(--lightred); font-weight: 900; text-align: center; font-size: 5.5em; letter-spacing: .5vw; margin: 0;}
 
-#worknav{display: flex; align-items: center; justify-content: center; column-gap: 1.2vw; row-gap: 1vw; flex-wrap: wrap;  position: sticky; top: 0; background-color: var(--black); width: 85%; margin: 0 auto;  font-size: 1.5em; padding: 1vw; max-width: 100%;}
+#worknav{display: flex; align-items: center; justify-content: center; column-gap: 1.2vw; row-gap: 1vw; flex-wrap: wrap;  position: sticky; top: 0; 
+  background-color: var(--black); width: 85%; margin: 0 auto;  font-size: 1.5em; padding: 1vw; max-width: 100%; margin-top: 2vw;}
 #worknav a{text-decoration: none; padding: .3vw;}
 #worknav a:hover{background-color: var(--grey); border-radius: .5vw;}
 #worknav a:active{color: var(--lightred);}
-
-/*.workpage #border{margin: auto; width: 50%;}*/
 
 .workpage div{padding-top: 8vw; max-width: 100%;}
 .workpage h2{letter-spacing: .2vw; color: var(--orange); font-family: Luxurious Roman, serif; margin-left: 7vw; font-size: 2.1em; margin-bottom: 2vw;}
 
 
-.work{width: 80%; max-width: 100%; height: auto; margin: auto; background-color: var(--darkred); border-color: var(--lightred); border-width: .5vw; border-style: solid; display: flex; flex-direction: row; flex-wrap: nowrap; align-items: center; column-gap: 1.5vw; overflow: scroll;}
+.work{width: 80%; max-width: 100%; height: auto; margin: auto; background-color: var(--darkred); border-color: var(--lightred); border-width: .5vw; border-style: solid; 
+  display: flex; flex-direction: row; flex-wrap: nowrap; align-items: center; column-gap: 1.5vw; overflow: scroll;}
 .workpage div .work{padding: 1.5vw; max-width: 100%; min-width: 0; overflow: scroll;}
 .work img{width: auto; max-width: 100%; max-height: 40vh;}
+#drawings{padding-top: 7vw;}
 
 /*resize images*/
 @media screen and (max-width: 1100px){
@@ -189,7 +212,7 @@ html:has(>.workpage){height: auto; margin: 0;}
 
 /*medium screens*/
 @media screen and (max-width: 830px){
-  .workpage>#navbar{font-size: 3.7em; column-gap: 15vw; padding: 2.5vw;}
+  .workpage>#navbar{font-size: 2.2em; padding: 1.2vw;}
   .workpage{width: 100%; height: 100%;}
   #heading{}
   #heading img{}
@@ -242,9 +265,9 @@ html:has(>.workpage){height: auto; margin: 0;}
 /*resize page*/
 @media screen and (max-width: 1200px) {
 
-#contactpage{width: 70%}
-#contact{width: 75%;}
-#contactpage h2{font-size: 3.4em; margin: 4vw auto 4vw;}
+#contactpage{width: 60%}
+#contact{width: 85%;}
+#contactpage h2{font-size: 3.4em; margin: 4vw auto 1vw;}
 #contactpage>#navbar{font-size: 1.8em;}
 #contact p{font-size: 1.8em; line-height: 2vw}
 #contactpage ul li{font-size: 1.8em; line-height: 2.8vw;}
@@ -253,7 +276,7 @@ html:has(>.workpage){height: auto; margin: 0;}
 
 /*medium screen*/
 
-@media screen and (max-width: 830px){
+@media screen and (max-width: 900px){
 
     #contactpage{width: 100%; height: 100%; }
     #contactpage>#contact{}
@@ -261,7 +284,8 @@ html:has(>.workpage){height: auto; margin: 0;}
     #contact p{font-size: 2.5em; line-height: 3.5vw}
     #contactpage ul li{font-size: 2.5em; line-height: 4vw;}
     #contact{width: 75%;}
-    #contactpage h2{font-size: 5.5em; margin: 5vw auto 8vw;}
+    #contactpage h2{font-size: 5.5em; margin: 5vw auto 5vw;}
+    body:has(>#contactpage){background-image: url(assets/bg2.webp); background-size: cover;}
   
 }
 
