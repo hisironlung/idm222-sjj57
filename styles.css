@@ -56,17 +56,13 @@ body{display: grid; align-items: center;}
 /*nav*/
 #navbar{display: flex; align-items: center; justify-content: center; column-gap: 8.5vw; background-color: var(--darkred); font-size: 1.6em; padding: .7vw;}
 #navbar a{align-self: center; text-decoration: none;}
-#navbar a:hover{background-color: var(--lightred); border-radius: .5vw;}
+#navbar a:hover{background-color: var(--lightred);}
 #navbar a:active{color: var(--grey);}
-/*table td a:hover{background-color: var(--darkgrey);}*/
 
-/*home page*/
 
-/*large screen*/
 
-/*@media screen and (min-width: 1400) {}*/
-  
 
+/*HOME PAGE--------------------------------------------------------------------------------------------------------------------*/
 
 .homepage{width: 60%; padding-bottom: 2.5vw; margin: auto; background-color: var(--black);}
 
@@ -114,11 +110,6 @@ li{list-style-type: '★'; line-height: 2.7vw; letter-spacing: -.06em;}
     #content li{line-height: 3.3vw;}
     .homepage p{font-size: 1.6em; line-height: 2.5vw;}
     body:has(>.homepage){background-image: url(assets/bg2.webp); background-size: cover;}
-
-  /*page width
-  grid width for image size
-  font sizes 
-  navbar sizes*/
 }
 
 @media screen and (max-width: 830px){
@@ -145,16 +136,17 @@ li{list-style-type: '★'; line-height: 2.7vw; letter-spacing: -.06em;}
   #namediv{text-align: center;}
   #namediv h2{font-size: 4em; margin: 0; margin-right: 3vw;}
   #namediv #name{font-size: 9em;}
-  #content ul{font-size: 3.2em;}
-  #content li{line-height: 6.9vw;}
-  h3{font-size: 4.3em; margin-bottom: 2vw; padding-left: 4vw;}
-  #content>#bullets{display: flex; flex-direction: column; align-items: center; justify-content: start; width: 93%;}
+  #content ul{font-size: 3.5em;}
+  #content li{line-height: 7.2vw;}
+  h3{font-size: 4.9em; margin-bottom: 2vw; padding-left: 4vw;}
+  #content>#bullets{display: flex; flex-direction: column; align-items: center; justify-content: start; width: 100%;}
   #content>#bullets>div{align-self: start; justify-self: center;}
   .homepage p{font-size: 3em; margin: 2vw 12vw; line-height: 5vw;}
-  #am{margin-right: 4vw; margin-left: 5vw;}
-  #like{margin-bottom: 2vw; margin-right: 5vw;}
+  #am{margin-right: 4vw; margin-left: 5vw; margin-bottom: 2vw; margin-top: 2vw;}
+  #like{margin-right: 5vw; margin-bottom: 3vw;}
   
 }
+/*HOME PAGE--------------------------------------------------------------------------------------------------------------------*/
 
 
 
@@ -168,14 +160,7 @@ li{list-style-type: '★'; line-height: 2.7vw; letter-spacing: -.06em;}
 
 
 
-
-
-
-
-
-
-
-/*work*/
+/*WORK PAGE--------------------------------------------------------------------------------------------------------------------*/
 body:has(>.workpage){height: auto; margin: 0; background-image: url(assets/bg2.webp);}
 html:has(>.workpage){height: auto; margin: 0;}
 .workpage>body{height: auto;}
@@ -214,9 +199,9 @@ html:has(>.workpage){height: auto; margin: 0;}
 @media screen and (max-width: 830px){
   .workpage>#navbar{font-size: 2.2em; padding: 1.2vw;}
   .workpage{width: 100%; height: 100%;}
-  #heading{}
+  #heading{margin: 8vw auto 4vw;}
   #heading img{}
-  #worktitle{font-size: 7em;}
+  #worktitle{font-size: 8em;}
   #worknav{font-size: 2.2em;}
   .workpage h2{font-size: 3em;}
 }
@@ -224,12 +209,14 @@ html:has(>.workpage){height: auto; margin: 0;}
 
 @media screen and (max-width: 550px){
   .work img{width: auto; max-width: 100%; max-height: 23vh;}
-  .workpage>#navbar{}
-  #worknav{}
+  .workpage>#navbar{font-size: 3.7em; column-gap: 15vw; padding: 2.5vw;}
+  #worknav{font-size: 3.5em; width: 95%; line-height: 6.5vw;}
+  #worknav a{margin: 0 1vw;}
   .workpage h2{font-size: 5em;}
   #worktitle{font-size: 9em;}
 
 }
+/*WORK PAGE--------------------------------------------------------------------------------------------------------------------*/
 
 
 
@@ -239,8 +226,7 @@ html:has(>.workpage){height: auto; margin: 0;}
 
 
 
-
-/*contact*/
+/*CONTACT PAGE--------------------------------------------------------------------------------------------------------------------*/
 
 /*large screen*/
 
@@ -293,7 +279,8 @@ html:has(>.workpage){height: auto; margin: 0;}
 
 @media screen and (max-width: 450px){
 
-  #contactpage{width: 100%; height: 100%;}
+  #contactpage{width: 100%; height: 100%; /*display: flex; flex-direction: column; row-gap: 10vw;*/}
+  #center{align-self: center;}
   #contact{width: 75%;}
   #contact{display: flex; flex-direction: column; align-items: center; justify-items: center; row-gap: 5vw;}
   #contactpage img{width: 20%; margin-bottom: 2vw;}
@@ -305,3 +292,4 @@ html:has(>.workpage){height: auto; margin: 0;}
   #contactpage ul{align-self: center; justify-self: center;}
 
 }
+/*CONTACT PAGE--------------------------------------------------------------------------------------------------------------------*/
