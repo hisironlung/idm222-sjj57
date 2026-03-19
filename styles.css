@@ -35,13 +35,17 @@
   font-family: 'Grenze Gotisch';
   src: url('fonts/Grenze_Gotisch/GrenzeGotisch-VariableFont_wght.ttf');
 }
+@font-face {
+  font-family: 'Tillana';
+  src: url('fonts/Tillana/');
+}
 
 
 
 
 
 
-html {font-family: Yuji Syuku, serif; overflow: auto;}
+html {font-family: Yuji Syuku, serif; font-weight: 800; overflow: auto;}
 a:link{color: var(--white);}
 a:visited{color: var(--white);}
 a:active{color: var(--white);}
@@ -113,7 +117,7 @@ li{list-style-type: '★'; line-height: 2.7vw; letter-spacing: -.06em;}
 }
 
 @media screen and (max-width: 850px){
-  .homepage{width: 100%; height: 100%;}
+  .homepage{width: 100%;}
   .homepage>#navbar{font-size: 2.7em; column-gap: 3.5vw; padding: 1.3vw;}
   #content{width: 85%; margin-top: 2vw;}
   #content ul{font-size: 1.9em;}
@@ -125,6 +129,7 @@ li{list-style-type: '★'; line-height: 2.7vw; letter-spacing: -.06em;}
 
 
 @media screen and (max-width: 600px){
+  .homepage{width: 100%; height: 100%;}
   .homepage>#navbar{font-size: 3.7em; column-gap: 3.8vw; padding: 2vw;}
   #navbar img{width: 8%;}
   #content{display: flex; flex-direction: column; width: 100%; margin-top: 5vw;}
@@ -278,7 +283,7 @@ html:has(>.workpage){height: auto; margin: 0;}
 
 @media screen and (max-width: 900px){
 
-    #contactpage{width: 100%; height: 100%;}
+    #contactpage{width: 100%;}
     #contactpage>#contact{width: 80%;}
     #contactpage>#navbar{font-size: 2.7em; column-gap: 3.5vw; padding: 1.3vw;}
     #contact p{font-size: 2.9em; line-height: 3.8vw}
@@ -291,7 +296,6 @@ html:has(>.workpage){height: auto; margin: 0;}
 /*small screen*/
 
 @media screen and (max-width: 450px){
-
   #contactpage{width: 100%; height: 100%;}
   #center{align-self: center;}
   #contact{width: 75%;}
