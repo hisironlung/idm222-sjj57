@@ -85,7 +85,7 @@ body{display: grid; align-items: center;}
 #content div{grid-column-start: 2; grid-column-end: 4; grid-row-start: 2; grid-row-end: 4; 
   max-width: 100%; width: 100%; display: block; align-self: center;}
   
-#name{font-size: 4em; color: var(--lightred); margin: 1.5vw 3vw 1.5vw 10vw; font-weight:900; letter-spacing: .5vw; font-family: Luxurious Roman, serif; text-transform: uppercase; text-shadow: 3px 2px 1px var(--darkred);}
+#name{font-size: 4em; color: var(--lightred); margin: 1.5vw 3vw 2.5vw 10vw; font-weight:900; letter-spacing: .5vw; font-family: Texturina, serif; text-transform: uppercase; text-shadow: 4px 2px 1px var(--darkred);}
 h2{color: var(--grey); padding-bottom: 0.2vw; margin-left: 1vw; font-size: 1.7em;}
 #deco{width: 48%; max-width: 100%; justify-self: start; align-self: baseline; margin-left: 2vw;}
 
@@ -98,11 +98,11 @@ h3{margin-bottom: 1vw;}
 #like>h3{margin-top: 1vw;}
 #am>h3{margin-top: 1vw;}
 
-h3{font-size: 1.8em; letter-spacing: .2vw; color: var(--lightred); font-family: Luxurious Roman, serif;}
+h3{font-size: 1.8em; letter-spacing: .2vw; color: var(--lightred); font-family: Texturina, serif;}
 #content ul{font-size: 1.2em; color: var(--orange); padding-inline-start: 3vw;}
 li{list-style-type: '★'; line-height: 2.7vw; letter-spacing: -.06em;}
 
-.homepage p{font-size: 1.2em; text-align: center; margin: 0 auto; width: 80%; line-height: 2vw;}
+
 
 
 
@@ -130,7 +130,6 @@ li{list-style-type: '★'; line-height: 2.7vw; letter-spacing: -.06em;}
   h3{margin-bottom: 1vw; font-size: 2.6em;}
   #like>h3{margin-top: 2vw;}
   #am>h3{margin-top: 1.8vw;}
-  .homepage p{font-size: 1.9em; margin: 2vw auto 0 auto; width: 80%; }
 }
 
 
@@ -148,7 +147,6 @@ li{list-style-type: '★'; line-height: 2.7vw; letter-spacing: -.06em;}
   h3{font-size: 4.9em; margin-bottom: 2vw; padding-left: 4vw;}
   #content>#bullets{display: flex; flex-direction: column; align-items: center; justify-content: start; width: 100%;}
   #content>#bullets>div{align-self: start; justify-self: center;}
-  .homepage p{font-size: 3.2em; margin: 2vw 12vw; line-height: 5.3vw;}
   #am{margin-right: 4vw; margin-left: 5vw; margin-bottom: 3vw; margin-top: 2vw;}
   #like{margin-right: 5vw; margin-bottom: 3vw;}
   
@@ -259,12 +257,10 @@ html:has(>.workpage){height: auto; margin: 0;}
 
 /*CONTACT PAGE--------------------------------------------------------------------------------------------------------------------*/
 
-/*large screen*/
 
 #contactpage{width: 55%; background-color: var(--black); padding-bottom: 2.5vw; max-width: 100%; margin: 0 auto;}
-#contactpage h2{font-family: Luxurious Roman, serif; color: var(--lightred); letter-spacing: .2vw; font-size: 2.8em; margin: 2vw auto 0; text-align: center; max-width: 100%;}
+#contactpage h2{font-family: Texturina, serif; color: var(--lightred); letter-spacing: .2vw; font-size: 2.8em; margin: 2vw auto 0; text-align: center; max-width: 100%;}
 
-/*grid*/
 #contact{display: grid; grid-template-columns: 44% 53%; column-gap: 1%; grid-template-rows: 46% 46%; row-gap: 8%; 
   align-items: center; justify-content: center; max-width: 100%; width: 90%; margin: 3vw auto 1.5vw;}
 #contact #image{grid-column-start: 1; grid-column-end: 2; grid-row-start: 1; grid-row-end: 3; 
@@ -279,7 +275,7 @@ html:has(>.workpage){height: auto; margin: 0;}
 #contactpage ul li a{margin-right: 1vw; color: var(--grey);}
 #contactpage ul li a:active{color: var(--white);}
 
-/*resize page*/
+
 @media screen and (max-width: 1100px) {
 
 #contactpage{width: 60%}
@@ -291,7 +287,7 @@ html:has(>.workpage){height: auto; margin: 0;}
 
 }
 
-/*medium screen*/
+
 
 @media screen and (max-width: 900px){
 
